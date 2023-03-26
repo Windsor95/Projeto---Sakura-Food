@@ -1,0 +1,47 @@
+/*.card-deposition {
+}*/
+
+.swal-overlay {
+  background-color: rgba(0, 0, 0, 0.45);
+}
+
+.swal-modal {
+  background-color: $brand-white;
+}
+.swal-button {
+  padding: 7px 19px;
+  border-radius: 2px;
+  color: $brand-red-light;
+  background: $brand-white;
+  font-size: 12px;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.swal-button--confirm:hover {
+  color: $brand-white;
+  background: $brand-red-light;
+}
+
+.swal-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(../img/bg.png);
+  margin-top: 32px;
+  border-top: 1px solid #e9eef1;
+  overflow: hidden;
+}
+.swal-title {
+  color: $brand-red-light;
+}
+.swal-text {
+  font-weight: 700;
+  border-radius: 15px;
+  background: url(../img/bg.png);
+  padding: 17px;
+  display: block;
+  margin: 22px;
+  text-align: center;
+  color: $brand-white;
+}

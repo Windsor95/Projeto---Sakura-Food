@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="./favicon.png" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Sakura Food</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo-box">
+          <a href="#">
+            <img src="./img/logo.svg" alt="" />
+          </a>
+        </div>
+        <div class="nav-box">
+          <nav class="nav-header js-nav-header">
+            <ul>
+              <li><a href="#" class="active">Home</a></li>
+              <li><a href="#menu">Menu</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+          <div class="btn-reserve">
+            <a href="#" class="reserve-box">RESERVE</a>
+          </div>
+          <button class="btn-cart-box js-btn-cart-box">
+            <div class="cart-count js-cart-count">
+              <p>0</p>
+            </div>
+            <img src="./img/cart-shoping.svg" alt="" />
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="s-hero">
+        <div class="dropdown-info js-dropdown-info">
+          <div class="container">
+            <div class="dropdown-left-info">
+              <img src="./img/submit-img01.png" alt="" />
+            </div>
+            <div class="dropdown-center-info js-dropdown-center-info">
+              <h2>Register</h2>
+              <input
+                type="text"
+                name="Nome"
+                class="js-nome-cadastro"
+                placeholder="Full name"
+                required
+              />
+              <input
+                type="tel"
+                name="Telefone"
+                class="js-tel-cadastro"
+                placeholder="Telephone"
+                required
+              />
+              <input
+                type="email"
+                name="E-mail"
+                class="js-email-cadastro"
+                placeholder="E-mail"
+                required
+              />
+              <div class="input-junto01">
+                <input
+                  type="number"
+                  name="CEP"
+                  class="js-cep-cadastro"
+                  placeholder="Zip code"
+                  required
+                />
+                <input
+                  type="text"
+                  name="Cidade"
+                  class="js-cid-cadastro"
+                  placeholder="City"
+                  required
+                />
+              </div>
+              <div class="input-junto02">
+                <input
+                  type="text"
+                  name="endereço"
+                  class="js-end-cadastro"
+                  placeholder="Address"
+                  required
+                />
+                <input
+                  type="text"
+                  name="numero"
+                  class="js-num-cadastro"
+                  placeholder="No."
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="dropdown-right-info">
+              <h3>comments</h3>
+              <textarea
+                class="obs js-obs-cadastro"
+                name="obs"
+                cols="30"
+                rows="10"
+                placeholder="Optional."
+              ></textarea>
+              <button class="js-btn-dropdown-info">To send</button>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown-cart js-dropdown-cart">
+          <div class="container">
+            <div class="dropdown-left">
+              <h2>your <br />request</h2>
+              <img src="./img/stick-sushi.png" alt="" />
+              <h3>item</h3>
+              <h3>value</h3>
+              <h3>amount</h3>
+            </div>
+            <div class="dropdown-center js-dropdown-items"></div>
+            <div class="dropdown-right">
+              <div class="img-right-dropdown">
+                <img src="./img/dpd-img01.png" alt="" />
+              </div>
+              <h3>Total $ 0.00</h3>
+              <button type="submit" class="btn-submit">checkout</button>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="box-left-hero">
+            <img src="./img/illustration.png" alt="" />
+          </div>
+          <div class="box-right-hero">
+            <div class="box-text-hero">
+              <h2>地域で最高の</h2>
+              <h2>一番おいしい</h2>
+              <h2>素晴らしい</h2>
+            </div>
+            <div class="table-hero-img js-table-hero-img active">
+              <img src="./img/table-img.png" alt="" class="js-img-hero" />
+            </div>
+            <!--<div class="table-hero-img js-table-hero-img active">
+              <img src="./img/combo-img.png" alt="" class="js-img-hero" />
+            </div>
+            <div class="table-hero-img js-table-hero-img active">
+              <img src="./img/udon-img.png" alt="" class="js-img-hero" />
+            </div>
+            <div class="table-hero-img js-table-hero-img active">
+              <img src="./img/taiyaki-img.png" alt="" class="js-img-hero" />
+            </div>-->
+          </div>
+        </div>
+      </section>
+
+      <section id="menu" class="s-menu js-s-menu">
+        <div class="container">
+          <h1>ITADAKIMASU</h1>
+          <div class="menu-cards js-menu-cards"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <img src="./img/imgFooter.png" alt="" />
+        <div class="social-box">
+          <a href=""><img src="./img/twitter.svg" alt="" /></a>
+          <a href=""><img src="./img/whatsapp.svg" alt="" /></a>
+          <a href=""><img src="./img/instagram.svg" alt="" /></a>
+          <a href=""><img src="./img/facebook.svg" alt="" /></a>
+        </div>
+        <p>&copy; Desenvolvido por: Windsor Kubic</p>
+      </div>
+    </footer>
+
+    <script src="./js/script.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  </body>
+</html>

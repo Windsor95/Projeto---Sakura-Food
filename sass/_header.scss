@@ -1,0 +1,72 @@
+header {
+  .container {
+    display: flex;
+    @include flex(row, center, space-between);
+    padding: 1.8rem 0;
+    .nav-box {
+      display: flex;
+      @include flex(row, center, space-between);
+
+      .nav-header {
+        ul {
+          display: flex;
+          @include flex(row, center, space-between);
+          gap: 2rem;
+          margin-right: 2rem;
+          li {
+            font-weight: 700;
+            font-size: 1.8rem;
+            line-height: 27px;
+            a {
+              color: $brand-white;
+              transition: color 0.3s ease;
+              &.active {
+                color: $brand-red-light;
+              }
+              &:hover {
+                color: $brand-red-light;
+              }
+            }
+          }
+        }
+      }
+
+      .reserve-box {
+        margin-right: 4rem;
+        padding: 0.4rem 1rem;
+        background-color: $brand-red-light;
+        color: $brand-white;
+        font-weight: 700;
+        font-size: 1.8rem;
+        line-height: 27px;
+        transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+        &:hover {
+          background-color: $brand-white;
+          color: $brand-red-light;
+        }
+      }
+
+      .btn-cart-box {
+        position: relative;
+        .cart-count {
+          position: absolute;
+          top: 0px;
+          right: -15px;
+          width: 2.5rem;
+          height: 2.5rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: $brand-red-light;
+          border-radius: 5rem;
+          p {
+            color: white;
+            font-weight: 700;
+            font-size: 1.5rem;
+            line-height: 18px;
+          }
+        }
+      }
+    }
+  }
+}

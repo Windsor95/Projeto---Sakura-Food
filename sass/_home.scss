@@ -1,0 +1,405 @@
+main {
+  .s-hero {
+    overflow: hidden;
+    .dropdown-cart {
+      opacity: 0;
+      pointer-events: none;
+      width: 100%;
+      max-width: 100%;
+      padding: 2rem;
+      height: 45rem;
+      background-color: aqua;
+      position: absolute;
+      z-index: 100;
+      background: url(../img/bg.png);
+      display: flex;
+      transform: translateY(-50px);
+      transition: all 0.1s ease-in-out;
+      &.active {
+        opacity: 1;
+        pointer-events: visible;
+        transform: translateY(0px);
+      }
+      .dropdown-left {
+        padding-right: 2rem;
+        border-right: 2px solid $brand-white;
+        h2,
+        h3 {
+          font-weight: 700;
+          font-size: 3.2rem;
+          line-height: 4.8rem;
+          text-align: center;
+          text-transform: uppercase;
+        }
+
+        img {
+          animation: floating 10s infinite;
+        }
+        h3 {
+          text-align: left;
+          &:not(:nth-child(1n)) {
+            margin-top: 1.5rem;
+          }
+
+          &:not(:last-child) {
+            margin-bottom: 1rem;
+          }
+        }
+      }
+      .dropdown-center {
+        display: flex;
+        gap: 2rem;
+        padding: 1rem;
+        .item-box {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 1.5rem;
+          &:hover .img-box-dd .btn-remove {
+            opacity: 1;
+            transform: translateY(0px);
+          }
+          .img-box-dd {
+            position: relative;
+            width: 100%;
+            max-width: 16.5rem;
+            height: 20rem;
+            overflow: hidden;
+            object-fit: cover;
+            border-radius: 2.5rem;
+            .btn-remove {
+              transform: translateY(-5px);
+              opacity: 0;
+              width: 100%;
+              font-size: 2rem;
+              font-family: "Poppins", sans-serif;
+              font-weight: 700;
+              max-width: 75%;
+              position: absolute;
+              top: 10px;
+              right: 0;
+              left: 0;
+              margin: 0 auto;
+              background-color: $brand-red-light;
+              box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+              color: $brand-white;
+              cursor: pointer;
+              border-radius: 15px;
+              padding: 5px 10px;
+              transition: all 0.3s ease;
+            }
+          }
+
+          img {
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+
+        h2 {
+          font-weight: 700;
+          font-size: 1.8rem;
+          line-height: 3rem;
+          text-transform: uppercase;
+        }
+        h3 {
+          font-size: 2.2rem;
+        }
+
+        .input-amount {
+          width: 100%;
+          width: 6.5rem;
+          height: 4rem;
+          font-size: 3.2rem;
+          font-weight: 700;
+          color: $brand-red-light;
+          text-align: center;
+          border-radius: 10px;
+        }
+      }
+      .dropdown-right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 8rem;
+        padding-left: 2rem;
+        border-left: 2px solid $brand-white;
+        h2 {
+          font-weight: 700;
+          font-size: 3.2rem;
+          line-height: 4.8rem;
+          text-align: center;
+          text-transform: uppercase;
+        }
+        h3 {
+          font-weight: 700;
+          font-size: 3.2rem;
+          line-height: 4.8rem;
+          text-align: center;
+          text-transform: uppercase;
+        }
+        .btn-submit {
+          background-color: $brand-white;
+          color: $brand-red-light;
+          padding: 1rem 1.5rem;
+          border-radius: 1.8rem;
+          font-weight: 700;
+          font-size: 1.8rem;
+
+          text-transform: uppercase;
+          opacity: 65%;
+          transition: all 0.2s ease-in-out;
+          &:hover {
+            opacity: 100%;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+          }
+        }
+      }
+    }
+
+    .dropdown-info {
+      opacity: 0;
+      pointer-events: none;
+      width: 100%;
+      max-width: 100%;
+      padding: 2rem;
+      height: 45rem;
+      background-color: aqua;
+      position: absolute;
+      z-index: 1001;
+      background: url(../img/bg.png);
+      display: flex;
+      transform: translateY(0px);
+      transition: all 0.1s ease-in-out;
+      &.active {
+        opacity: 1;
+        pointer-events: visible;
+        transform: translateY(0px);
+      }
+      .dropdown-left-info {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-right: 2rem;
+        border-right: 2px solid $brand-white;
+      }
+
+      .dropdown-center-info {
+        width: 80%;
+        max-width: 80%;
+        display: flex;
+        gap: 2rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        h2 {
+          padding: 0;
+          font-weight: 700;
+          font-size: 4rem;
+          line-height: 6.2rem;
+        }
+        input {
+          width: 100%;
+          max-width: 70rem;
+          height: 3.5rem;
+          border-radius: 2rem;
+          padding: 2rem;
+        }
+
+        .input-junto01 {
+          display: flex;
+          width: 100%;
+          max-width: 90%;
+          gap: 1rem;
+
+          input {
+            width: 100%;
+            &:first-child {
+              width: 100%;
+              max-width: 20rem;
+            }
+          }
+        }
+        .input-junto02 {
+          display: flex;
+          width: 100%;
+          max-width: 90%;
+          gap: 1rem;
+          input {
+            width: 100%;
+            &:last-child {
+              width: 100%;
+              max-width: 20rem;
+            }
+          }
+        }
+      }
+      .dropdown-right-info {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 2rem;
+        border-left: 2px solid $brand-white;
+        h3 {
+          padding: 0;
+          font-weight: 700;
+          font-size: 2rem;
+          line-height: 6.2rem;
+          text-transform: uppercase;
+        }
+        .obs {
+          padding: 1rem;
+          height: 15rem;
+          border-radius: 2rem;
+          resize: vertical;
+        }
+        button {
+          margin-top: 3rem;
+          background-color: $brand-white;
+          color: $brand-red-light;
+          border-radius: 1rem;
+          padding: 1rem 3rem;
+          font-size: 2.5rem;
+          font-weight: 700;
+        }
+      }
+    }
+
+    .container {
+      padding: 2rem 0;
+      @include flex(row, center, space-between);
+
+      .box-left-hero {
+        img {
+          width: 38rem;
+          transition: all 0.3s ease-in-out;
+          animation: floating 10s ease infinite;
+        }
+      }
+
+      .box-right-hero {
+        @include flex(column, center, center);
+        .box-text-hero {
+          display: flex;
+          justify-content: space-between;
+          gap: 5.5rem;
+          margin-bottom: 2.7rem;
+          h2 {
+            font-size: 4rem;
+            line-height: 5.4rem;
+            &:nth-child(2) {
+              color: $brand-red-light;
+            }
+          }
+        }
+
+        .table-hero-img {
+          opacity: 1;
+          pointer-events: visible;
+          img {
+            width: 80rem;
+          }
+          &.active {
+          }
+        }
+      }
+    }
+  }
+  .s-menu {
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+    .container {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      h1 {
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 60px;
+        margin-bottom: 2rem;
+      }
+
+      .menu-cards {
+        display: flex;
+        flex-wrap: wrap;
+        .card-box {
+          width: 100%;
+          max-width: 25%;
+          position: relative;
+          height: 45rem;
+          overflow: hidden;
+          cursor: pointer;
+          transition: flex 0.3s ease;
+          &:hover .img-card {
+            height: 100%;
+            opacity: 100%;
+          }
+          &:hover .box-info-value {
+            opacity: 1;
+            transform: translateX(0px);
+          }
+
+          .img-card {
+            height: 100%;
+            object-fit: cover;
+            opacity: 65%;
+            transition: opacity 0.3s ease-in-out;
+          }
+          .box-info-value {
+            opacity: 0;
+            transform: translateX(-20px);
+            transition: all 0.3s ease-in-out;
+            .info-value-add {
+              width: 90%;
+              position: absolute;
+              bottom: 10px;
+              left: 0;
+              right: 0;
+              margin: 0 auto;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              padding: 0.5rem 1rem;
+              border-radius: 15px;
+              background-color: $brand-red-light;
+              h3 {
+                position: initial;
+                padding: 0;
+                font-size: 2rem;
+              }
+              p {
+                font-weight: 700;
+                font-size: 2.2rem;
+                line-height: 4.8rem;
+              }
+              .btn-add-cart {
+                opacity: 65%;
+                padding: 5px;
+                background-color: $brand-white;
+                border-radius: 5px;
+                transition: all 0.2s ease-in-out;
+                &:hover {
+                  opacity: 1;
+                  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+                }
+                img {
+                  width: 3rem;
+                }
+              }
+            }
+            &.active {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+}
